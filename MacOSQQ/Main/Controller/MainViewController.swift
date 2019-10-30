@@ -28,8 +28,8 @@ class MainViewController: NSViewController {
         toolBarView.frame = NSRect(x: 0, y: view.height - 54, width: view.width, height: 54)
         view.addSubview(toolBarView)
         toolBarView.mas_makeConstraints { (make) in
-            make?.left.equalTo()(self)
-            make?.right.equalTo()(self)
+            make?.left.equalTo()(self.view)
+            make?.right.equalTo()(self.view)
             make?.height.offset()(54)
         }
         
