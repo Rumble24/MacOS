@@ -10,17 +10,16 @@ import Cocoa
 
 class SearchTextField: NSTextField {
     let searchImageView = NSImageView(image: #imageLiteral(resourceName: "04"))
-    override func draw(_ dirtyRect: NSRect) {
-        super.draw(dirtyRect)
-        layer?.cornerRadius = dirtyRect.height / 2
+    override init(frame frameRect: NSRect) {
+        super.init(frame: frameRect)
+        
+        layer?.cornerRadius = height / 2
         layer?.masksToBounds = true
         
         layer?.borderColor = NSColor.white.cgColor
         layer?.borderWidth = 2.5
         
-        searchImageView.frame = NSRect(x: 10, y: 2, width: 20, height: 20)
-        
-        font = NSFont.systemFont(ofSize: 13)
+        font = NSFont.systemFont(ofSize: 15)
 
         focusRingType = .none
         isBordered = false
@@ -28,10 +27,12 @@ class SearchTextField: NSTextField {
         backgroundColor = .white
         
         //添加搜索图片
+        searchImageView.frame = NSRect(x: 10, y: 2, width: 20, height: 20)
         addSubview(searchImageView)
     }
-    override func mouseEntered(with event: NSEvent) {
-        super.mouseEntered(with: event)
-        searchImageView.removeFromSuperview()
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
+        
 }

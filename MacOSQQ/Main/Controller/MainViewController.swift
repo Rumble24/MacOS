@@ -9,7 +9,7 @@
 import Cocoa
 
 class MainViewController: NSViewController {
-
+    
     var toolBarView: MainToolBarView!
     var contentTabView: NSTabView!
     
@@ -27,6 +27,11 @@ class MainViewController: NSViewController {
         toolBarView.delegate = self
         toolBarView.frame = NSRect(x: 0, y: view.height - 54, width: view.width, height: 54)
         view.addSubview(toolBarView)
+        toolBarView.mas_makeConstraints { (make) in
+            make?.left.equalTo()(self)
+            make?.right.equalTo()(self)
+            make?.height.offset()(54)
+        }
         
         contentTabView = NSTabView()
         contentTabView.tabViewType = .noTabsNoBorder
@@ -44,8 +49,6 @@ class MainViewController: NSViewController {
         contentTabView.selectTabViewItem(at: 0)
         view.addSubview(contentTabView)
     }
-    
-    
 }
 
 extension MainViewController: MainToolBarViewDelegate {

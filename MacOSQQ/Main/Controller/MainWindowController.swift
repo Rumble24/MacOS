@@ -30,6 +30,8 @@ class MainWindowController: NSWindowController {
         window.backgroundColor = .white
         
         window.titlebarAppearsTransparent = true
+        
+        window.minSize = NSSize(width: mainW, height: mainH)
 
         let mainWindowVC = MainWindowController(window: window)
         mainWindowVC.window?.animationBehavior = .documentWindow

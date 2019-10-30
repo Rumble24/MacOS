@@ -7,7 +7,7 @@
 //  248 * 316
 //  还有一个显示头像的collectionview 点击
 //  158 * 100
-//  存在的问题： 1.无法播放声音  2.convert得到的frame不正确   3.addTrackingArea什么意思
+//  存在的问题:  2.convert得到的frame不正确 4.约束写代码   5.mouthdown不执行
 
 import Cocoa
 
@@ -59,12 +59,12 @@ class LoginViewController: NSViewController {
         
         headerColl = LoginHeaderCollection.init()
         headerColl.delegate = self
+        headerColl.isHidden = true
         headerColl.frame = NSRect(x: (view.width - 158) / 2.0, y: view.height - 40 - 100, width: 158, height: 100)
         view.addSubview(headerColl)
         
         //< 头像
         headerBut = LoginImageButton(frame: headerRect)
-        headerBut.isHidden = true
         headerBut.image = NSImage(named: "avater")
         headerBut.target = self
         headerBut.action = #selector(headerButAction(_:))
@@ -153,6 +153,7 @@ extension LoginViewController {
     
     //< 显示 设置的
     @objc func downAction(_ sender: NSButton) {
+        LoginViewController.sound?.play()
         NSAnimationContext.runAnimationGroup({ (context) in
             context.duration = 0.5
             context.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)

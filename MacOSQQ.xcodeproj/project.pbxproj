@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C2D98AAEC728666D48BE56D /* Pods_MacOSQQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C3EFDD4AFCDB33392767DC /* Pods_MacOSQQ.framework */; };
 		640FB87623603045009B4CFD /* LoginImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640FB87523603045009B4CFD /* LoginImageButton.swift */; };
 		640FB87923603DA3009B4CFD /* LoginAccountTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640FB87823603DA3009B4CFD /* LoginAccountTextField.swift */; };
 		640FB8A023606E65009B4CFD /* LoginPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640FB89F23606E65009B4CFD /* LoginPasswordTextField.swift */; };
@@ -30,6 +31,7 @@
 		64F80EDE236707A60085D7CF /* LoginHeaderCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F80EDD236707A60085D7CF /* LoginHeaderCollection.swift */; };
 		64F80EE02367080D0085D7CF /* HDBaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F80EDF2367080D0085D7CF /* HDBaseData.swift */; };
 		64F80EE223670A420085D7CF /* HDCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F80EE123670A420085D7CF /* HDCollectionViewItem.swift */; };
+		64FD97FA23692B5800BEC0A2 /* HDLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FD97F923692B5800BEC0A2 /* HDLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,11 @@
 		64F80EDD236707A60085D7CF /* LoginHeaderCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHeaderCollection.swift; sourceTree = "<group>"; };
 		64F80EDF2367080D0085D7CF /* HDBaseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDBaseData.swift; sourceTree = "<group>"; };
 		64F80EE123670A420085D7CF /* HDCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDCollectionViewItem.swift; sourceTree = "<group>"; };
+		64FD97F923692B5800BEC0A2 /* HDLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDLabel.swift; sourceTree = "<group>"; };
+		64FD97FB236936CF00BEC0A2 /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
+		71C3EFDD4AFCDB33392767DC /* Pods_MacOSQQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacOSQQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B16CA8744C8401AF99ECA06D /* Pods-MacOSQQ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacOSQQ.release.xcconfig"; path = "Target Support Files/Pods-MacOSQQ/Pods-MacOSQQ.release.xcconfig"; sourceTree = "<group>"; };
+		C59CF11D9D952A2BFD5EB82D /* Pods-MacOSQQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacOSQQ.debug.xcconfig"; path = "Target Support Files/Pods-MacOSQQ/Pods-MacOSQQ.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +73,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C2D98AAEC728666D48BE56D /* Pods_MacOSQQ.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60F41A20A7333AA20874DE59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71C3EFDD4AFCDB33392767DC /* Pods_MacOSQQ.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		640FB87723603D33009B4CFD /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +111,7 @@
 			children = (
 				640FB8AD2361799C009B4CFD /* HDLayout.swift */,
 				64F80EDF2367080D0085D7CF /* HDBaseData.swift */,
+				64FD97FB236936CF00BEC0A2 /* Bridging.h */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -105,6 +122,7 @@
 				640FB8B023617CF5009B4CFD /* HDButton.swift */,
 				640FB8CA2361CE1B009B4CFD /* HDView.swift */,
 				64F80EE123670A420085D7CF /* HDCollectionViewItem.swift */,
+				64FD97F923692B5800BEC0A2 /* HDLabel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -143,6 +161,8 @@
 			children = (
 				64E1CC2A235EF3CB00C9DB22 /* MacOSQQ */,
 				64E1CC29235EF3CB00C9DB22 /* Products */,
+				A0C00899B2134BF7A787B288 /* Pods */,
+				60F41A20A7333AA20874DE59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,6 +212,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A0C00899B2134BF7A787B288 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C59CF11D9D952A2BFD5EB82D /* Pods-MacOSQQ.debug.xcconfig */,
+				B16CA8744C8401AF99ECA06D /* Pods-MacOSQQ.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64E1CC38235EF3D000C9DB22 /* Build configuration list for PBXNativeTarget "MacOSQQ" */;
 			buildPhases = (
+				2BFA61EA6DF10E5AFF6E2FCB /* [CP] Check Pods Manifest.lock */,
 				64E1CC24235EF3CB00C9DB22 /* Sources */,
 				64E1CC25235EF3CB00C9DB22 /* Frameworks */,
 				64E1CC26235EF3CB00C9DB22 /* Resources */,
+				EB86F766197711BC27D48624 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,12 +289,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2BFA61EA6DF10E5AFF6E2FCB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MacOSQQ-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB86F766197711BC27D48624 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MacOSQQ/Pods-MacOSQQ-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MacOSQQ/Pods-MacOSQQ-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MacOSQQ/Pods-MacOSQQ-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		64E1CC24235EF3CB00C9DB22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				640FB8A22361508B009B4CFD /* LoginViewController.swift in Sources */,
+				64FD97FA23692B5800BEC0A2 /* HDLabel.swift in Sources */,
 				640FB8DB2362EA8D009B4CFD /* MainViewController.swift in Sources */,
 				640FB8CB2361CE1B009B4CFD /* HDView.swift in Sources */,
 				64C79BD0236832FD00C11F58 /* MemberViewController.swift in Sources */,
@@ -415,6 +489,7 @@
 		};
 		64E1CC39235EF3D000C9DB22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C59CF11D9D952A2BFD5EB82D /* Pods-MacOSQQ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MacOSQQ/MacOSQQ.entitlements;
@@ -427,12 +502,15 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hundun.cn.MacOSQQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = $SRCROOT/MacOSQQ/Tool/Bridging.h;
 				SWIFT_VERSION = 5.0;
+				USER_HEADER_SEARCH_PATHS = $SRCROOT;
 			};
 			name = Debug;
 		};
 		64E1CC3A235EF3D000C9DB22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B16CA8744C8401AF99ECA06D /* Pods-MacOSQQ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MacOSQQ/MacOSQQ.entitlements;
@@ -445,7 +523,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hundun.cn.MacOSQQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = $SRCROOT/MacOSQQ/Tool/Bridging.h;
 				SWIFT_VERSION = 5.0;
+				USER_HEADER_SEARCH_PATHS = $SRCROOT;
 			};
 			name = Release;
 		};
