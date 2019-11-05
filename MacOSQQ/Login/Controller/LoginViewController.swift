@@ -7,7 +7,7 @@
 //  248 * 316
 //  还有一个显示头像的collectionview 点击
 //  158 * 100
-//  存在的问题:  2.convert得到的frame不正确 4.约束写代码   5.mouthdown不执行
+//  存在的问题:  5.mouthdown不执行
 
 import Cocoa
 
@@ -120,7 +120,10 @@ class LoginViewController: NSViewController {
         }
     }
     
-    
+    override func mouseDown(with event: NSEvent) {
+        super.mouseDown(with: event)
+        print(" mouseDown  ")
+    }
 }
 
 //< 按钮的点击方法
@@ -129,7 +132,7 @@ extension LoginViewController {
     @objc func headerButAction(_ sender: NSButton) {
         //设置运行后所显示的个人图像
         let firstItem = self.headerColl.coll.item(at: itemIndex)
-        itemRect = self.view.convert((firstItem?.view.frame)!, from: headerColl)
+        itemRect = self.view.convert((firstItem?.view.frame)!, from: headerColl.coll)
         NSAnimationContext.runAnimationGroup({ (context) in
             context.duration = 0.5
             context.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
@@ -176,7 +179,8 @@ extension LoginViewController: LoginHeaderCollectionDelegate {
         headerColl.isHidden = true
         headerBut.isHidden = false
         
-        itemRect = self.view.convert(item.view.frame, from: headerColl)
+        itemRect = self.view.convert(item.view.frame, from: headerColl.coll)
+
         headerBut.frame = itemRect ?? headerRect
         NSAnimationContext.runAnimationGroup({ (context) in
             context.duration = 0.5

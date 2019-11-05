@@ -16,8 +16,4 @@ class HDView: NSView {
         // Drawing code here.
     }
     
-    override var isFlipped: Bool {
-        return true
-    }
-    
 }
